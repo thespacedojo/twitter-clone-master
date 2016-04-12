@@ -1,5 +1,7 @@
 import React from 'react';
 
+import AddTweet from '/imports/client/ui/components/add_tweet.jsx';
+
 export const TweetStream = () => (
   <div id="stream" className="container">
     <div className="row">
@@ -30,9 +32,7 @@ export const TweetStream = () => (
             </table>
           </div>
 
-          <div className="panel-footer">
-            <input type="text" className="form-control" placeholder="Compose new Tweet..." />
-          </div>
+          <AddTweet />
         </div>
 
         <div id="trending" className="panel panel-default">
