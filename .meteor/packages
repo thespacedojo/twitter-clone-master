@@ -24,3 +24,4 @@ fortawesome:fontawesome
 std:accounts-ui@1.1.13
 accounts-password
 matb33:collection-hooks
+dburles:collection-helpers

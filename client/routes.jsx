@@ -3,7 +3,7 @@ import {mount} from 'react-mounter';
 import { Accounts, STATES } from 'meteor/std:accounts-ui';
 
 import AppLayout from '/imports/client/ui/layout.jsx';
-import {TweetStream} from '/imports/client/ui/components/tweet_stream.jsx';
+import TweetStream from '/imports/client/ui/containers/tweet_stream.js';
 import {Profile} from '/imports/client/ui/components/profile.jsx';
 import {Notifications} from '/imports/client/ui/components/notifications.jsx';
 
