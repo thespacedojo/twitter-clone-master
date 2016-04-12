@@ -8,6 +8,8 @@ export default AppLayout = ({content}) => (
       <AppNavbar />
     </header>
 
-    {content}
+    <div className="mainContent">
+      {content}
+    </div>
   </div>
 );
