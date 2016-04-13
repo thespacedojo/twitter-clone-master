@@ -6,6 +6,7 @@ import AppLayout from '/imports/client/ui/layout.jsx';
 import TweetStream from '/imports/client/ui/containers/tweet_stream.js';
 import {Profile} from '/imports/client/ui/components/profile.jsx';
 import {Notifications} from '/imports/client/ui/components/notifications.jsx';
+import {clearFlashMessages} from '/imports/client/ui/components/flash_message.jsx';
 
 Accounts.config({
   sendVerificationEmail: true,
@@ -22,6 +23,8 @@ Accounts.ui.config({
   onSignedOutHook: () => FlowRouter.go('/sign-in'),
   minimumPasswordLength: 6
 });
+
+FlowRouter.triggers.exit([clearFlashMessages]);
 
 FlowRouter.route('/sign-in', {
   action(params) {

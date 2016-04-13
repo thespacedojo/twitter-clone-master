@@ -1,6 +1,8 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {Tweets} from '/lib/collections.js';
+import {FlashMessages} from '/imports/client/ui/components/flash_message.jsx';
 
 class AddTweet extends React.Component {
   constructor(props) {
@@ -12,9 +14,10 @@ class AddTweet extends React.Component {
     form = event.target;
     Tweets.insert({tweetText: this.refs.tweetText.value}, (err, id) => {
       if (err) {
-        console.log(err);
+        FlashMessages.insert({type: 'danger', message: err.reason});
       } else {
         form.reset();
+        FlashMessages.insert({type: 'success', message: 'Your tweet was added!'});
       }
     });
   }
