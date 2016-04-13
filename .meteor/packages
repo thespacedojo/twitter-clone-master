@@ -26,3 +26,4 @@ accounts-password
 matb33:collection-hooks
 dburles:collection-helpers
 check
+peerlibrary:reactive-publish

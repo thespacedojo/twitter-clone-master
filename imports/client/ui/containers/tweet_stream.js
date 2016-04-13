@@ -6,7 +6,7 @@ import {Tweets} from '/lib/collections.js';
 function composer(props, onData) {
   const handle = Meteor.subscribe('tweets');
   if (handle.ready()) {
-    const tweets = Tweets.find().fetch();
+    const tweets = Tweets.find({}, {sort: {tweetedAt: -1}}).fetch();
     onData(null, {tweets});
   }
 }
