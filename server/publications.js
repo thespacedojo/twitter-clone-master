@@ -29,3 +29,7 @@ Meteor.publish('profileTweets', function(username) {
   let user = Meteor.users.findOne({username: username});
   return Tweets.find({userId: user._id});
 });
+
+Meteor.publish('notifications', function() {
+  return Tweets.find({mentionIds: this.userId});
+});
