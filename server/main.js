@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
+import { Tweets } from '/lib/collections.js';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+  Tweets.rawCollection().createIndex({userId: 1}, {background: true}, function() {})
 });
