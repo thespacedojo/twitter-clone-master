@@ -11,7 +11,7 @@ export default AppLayout = ({content}) => (
 
     <FlashDisplay />
     <div className="mainContent">
-      {content}
+      {content()}
     </div>
   </div>
 );
